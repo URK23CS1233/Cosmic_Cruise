@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Cruise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon.jpg">
+    
+</head>
+
+<body>
+    <!-- Advertisement Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-heading">Join the Cosmic Concert with Bruno Mars!</h2>
+            <p class="modal-text">Get ready for an out-of-this-world experience! Sing alongside Bruno Mars on the moon!
+                Limited spots available. Don't miss this chance to shine!</p>
+            <button onclick="openSignIn()">Book Your Spot Now</button>
+        </div>
+    </div>
+
+    <!-- Main Page -->
+    <header>
+        <h1 class="cosmic-cruise-heading">🌌🚀Cosmic Cruise🔥🌍</h1>
+        <nav>
+            <ul>
+                <li><a class="funky-link" href="About_Us.html" target="_blank">About Us</a></li>
+                <li><a class="funky-link" href="Testimonials.html" target="_blank">Testimonials</a></li>
+                <li><a class="funky-link" href="helpdesk.html" target="_blank">Help Desk</a></li>
+                <li><a class="funky-link" href="packages.html" target="_blank">Packages</a></li>
+                <li><a class="funky-link" href="Terms_Condi.html" target="_blank">Terms and Conditions</a></li>
+                <li><a class="funky-link" href="sign-up.html" target="_blank">Sign Up</a></li>
+                <li><a class="funky-link" href="sign-in.html" target="_blank">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="space-background">
+            <div class="quote" style="margin-top: -20px;">
+                <i class="italic-quote fancy-quote">"The universe is not only much stranger than we think."</i> - Albert Einstein
+            </div>
+        </div>
+    </section>
+
+    <section class="space-adventure">
+        <div class="youtube-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wEZBNsU4dMU" 
+title="YouTube video player" frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen></iframe>
+
+        </div>
+        <div class="description">
+            <h2 class="bold-heading">Experience Space Tourism</h2>
+            <p class="visible-text fancy-paragraph">Space tourism is the ultimate adventure, offering individuals the chance to experience the
+                wonders of space beyond Earth's atmosphere. From breathtaking views of our planet to the sensation of
+                weightlessness, space travel provides an unparalleled experience once reserved for astronauts. As
+                technology advances, commercial spaceflight is becoming more accessible, with private companies
+                pioneering orbital and suborbital trips. Whether it's a stay at a space hotel, a lunar expedition, or a
+                quick journey beyond the Kármán line, space tourism represents the next frontier in human exploration,
+                opening up endless possibilities for the future of travel.</p>
+        </div>
+    </section>
+
+    <button id="trip-button" class="small-trip-button" onclick="openSignIn()">Let's Get Tripping</button>
+    <img id="rocket" src="R.png" alt="Rocket">
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("modal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            } else if (event.target.parentNode == modal) {
+                return;
+            } else if (event.target.classList.contains("modal-content") || event.target.parentNode.classList.contains("modal-content")) {
+                return;
+            } else {
+                modal.style.display = "none";
+            }
+        }
+
+        function openSignIn() {
+            // Redirect to sign-in page
+            window.location.href = "sign-in.html";
+        }
+
+        // Automatically close the modal after a few seconds
+        setTimeout(function () {
+            modal.style.display = "none";
+        }, 5000); // Close after 5 seconds
+
+    </script>
+    <footer>
+        <p>&copy; 2025 Cosmic Cruise. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
